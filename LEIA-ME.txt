@@ -1,0 +1,21 @@
+MEU TREINO PRO 4.0 — INSTALAÇÃO E LIMITES
+
+PUBLICAÇÃO NO GITHUB PAGES
+1. Abra o repositório meu-treino no GitHub.
+2. Faça backup dos dados pelo aplicativo anterior.
+3. Extraia este ZIP e envie TODOS os arquivos desta pasta para a raiz do repositório (não envie o ZIP).
+4. Confirme o commit. Acompanhe Actions > pages build and deployment.
+5. Abra https://SEU-USUARIO.github.io/meu-treino/ no Safari.
+6. Para instalar: Compartilhar > Adicionar à Tela de Início.
+
+ATENÇÃO
+- Os dados são armazenados localmente no navegador de cada aparelho, sem sincronização.
+- Backup em JSON e exportação CSV são recomendados regularmente.
+- Não use a mesma instalação para dados sensíveis de clientes; ainda não há autenticação.
+- Ilustrações SVG são esquemáticas e originais, não fotografias.
+- Estimativas nutricionais e energéticas são orientativas.
+- Não há integração com pagamentos, loja, nuvem ou banco nutricional oficial.
+- O software não é ainda um SaaS pronto para venda a terceiros.
+
+PARA COMERCIALIZAR
+Implementar contas individuais, banco de dados, backups remotos, LGPD e política de privacidade, gestão de assinatura/pagamentos, termos, suporte, validação de segurança e revisão profissional dos planos.
