@@ -1,21 +1,30 @@
-MEU TREINO PRO 4.0 — INSTALAÇÃO E LIMITES
+MEU TREINO PRO 5.0 — LEIA ANTES DE PUBLICAR
+
+1. ABRA landing.html para a página pública de apresentação.
+2. ABRA demo.html para a demonstração com dados fictícios.
+3. ABRA index.html para o aplicativo local completo de treinos (sem autenticação).
+4. A pasta cloud/ contém uma BETA conectável ao Supabase. Ainda não está configurada nem pronta para comercializar.
+
+IMPORTANTE
+- Os registros do aplicativo principal ficam salvos somente neste navegador/dispositivo.
+- Antes de trocar os arquivos V4 por V5, abra o aplicativo V4 no iPhone e EXPORTE O BACKUP JSON.
+- A atualização mantém a chave do armazenamento, os dois perfis e a leitura de backups V2/V5.
+- O modo demo é isolado e usa dados fictícios. Não envie dados reais para demonstrações públicas.
+- Na versão local, cada perfil é selecionável sem senha. Não use para dados sensíveis de clientes.
+- As imagens SVG são ilustrações genéricas por grupo muscular, não fotografias nem demonstrações específicas dos exercícios.
+- Treinos e valores calóricos são orientativos, não uma prescrição profissional.
+- Não existe pagamento, sincronização automática, assinatura ativa ou painel admin.
 
 PUBLICAÇÃO NO GITHUB PAGES
-1. Abra o repositório meu-treino no GitHub.
-2. Faça backup dos dados pelo aplicativo anterior.
-3. Extraia este ZIP e envie TODOS os arquivos desta pasta para a raiz do repositório (não envie o ZIP).
-4. Confirme o commit. Acompanhe Actions > pages build and deployment.
-5. Abra https://SEU-USUARIO.github.io/meu-treino/ no Safari.
-6. Para instalar: Compartilhar > Adicionar à Tela de Início.
+1. Faça backup na V4. NÃO limpe os dados do Safari.
+2. Extraia todo o conteúdo deste ZIP, sem criar uma pasta a mais dentro da raiz do repositório.
+3. No GitHub, abra o repositório e envie os arquivos e as pastas cloud/, docs/ e tests/.
+4. Faça commit. Vá a Settings > Pages e ative publicação do branch principal / (root), se ainda não estiver ativado.
+5. Acompanhe Actions > pages build and deployment e aguarde a conclusão exibida pelo GitHub.
+6. Abra https://SEU-USUARIO.github.io/SEU-REPOSITORIO/index.html no Safari. Instale com Compartilhar > Adicionar à Tela de Início.
+7. Para apresentação pública, use https://SEU-USUARIO.github.io/SEU-REPOSITORIO/landing.html.
 
-ATENÇÃO
-- Os dados são armazenados localmente no navegador de cada aparelho, sem sincronização.
-- Backup em JSON e exportação CSV são recomendados regularmente.
-- Não use a mesma instalação para dados sensíveis de clientes; ainda não há autenticação.
-- Ilustrações SVG são esquemáticas e originais, não fotografias.
-- Estimativas nutricionais e energéticas são orientativas.
-- Não há integração com pagamentos, loja, nuvem ou banco nutricional oficial.
-- O software não é ainda um SaaS pronto para venda a terceiros.
+ATENÇÃO: se o GitHub Pages mostrar versão antiga, atualize o Safari/PWA e verifique o service worker. Não desinstale nem apague os dados antes de exportar backup.
 
-PARA COMERCIALIZAR
-Implementar contas individuais, banco de dados, backups remotos, LGPD e política de privacidade, gestão de assinatura/pagamentos, termos, suporte, validação de segurança e revisão profissional dos planos.
+DETALHAMENTO
+Consulte README.md, docs/AUDITORIA_E_ROADMAP.md, docs/TESTES.md e cloud/README.md.

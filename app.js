@@ -8,11 +8,11 @@ const plan=[
 
 const nathtPlan=[
 {day:'Segunda',name:'Corpo inteiro A',ex:[['Leg press',2,'10–12'],['Puxada frontal',2,'10–12'],['Supino máquina',2,'10–12'],['Mesa flexora',2,'12'],['Abdominal máquina',2,'12–15']],cardio:'Esteira · 15–20 min'},
-{day:'Terça',name:'Cardio e mobilidade',ex:[['Bicicleta ergométrica',1,'20–30 min'],['Prancha',2,'20–30 s'],['Mobilidade de quadril',2,'8–10'],['Mobilidade de ombros',2,'8–10']],cardio:'Caminhada leve opcional · 10 min'},
+{day:'Terça',name:'Superior leve e mobilidade',ex:[['Remada baixa',2,'12'],['Supino máquina',2,'12'],['Elevação lateral',2,'12–15'],['Prancha',2,'20–30 s'],['Mobilidade de quadril',2,'8–10']],cardio:'Bicicleta leve · 15–20 min'},
 {day:'Quarta',name:'Corpo inteiro B',ex:[['Agachamento guiado',2,'10–12'],['Remada baixa',2,'10–12'],['Desenvolvimento máquina',2,'10–12'],['Cadeira flexora',2,'12'],['Panturrilha máquina',2,'12–15']],cardio:'Esteira · 15–20 min'},
-{day:'Quinta',name:'Cardio e abdômen',ex:[['Esteira caminhada rápida',1,'20–30 min'],['Abdominal máquina',2,'12–15'],['Prancha lateral',2,'15–25 s por lado'],['Mobilidade geral',2,'8–10']],cardio:'Cardio principal incluído acima'},
+{day:'Quinta',name:'Inferior leve e core',ex:[['Cadeira extensora',2,'12'],['Cadeira flexora',2,'12'],['Panturrilha máquina',2,'15'],['Abdominal máquina',2,'12–15'],['Prancha lateral',2,'15–25 s por lado']],cardio:'Esteira leve · 15–20 min'},
 {day:'Sexta',name:'Corpo inteiro C',ex:[['Cadeira extensora',2,'12'],['Elevação pélvica',2,'12'],['Puxada frontal',2,'10–12'],['Supino inclinado máquina',2,'10–12'],['Rosca direta',2,'12'],['Tríceps polia',2,'12']],cardio:'Bicicleta · 15–20 min'}];
-const profiles={mauricio:{name:'Maurício',age:27,height:'1,77 m',weight:'80 kg',plan},natht:{name:'Natht',age:24,height:'1,65 m',weight:'67 kg',plan:nathtPlan}};
+const profiles={mauricio:{name:'Maurício',age:27,height:'1,77 m',weight:'80 kg',plan},natht:{name:'Nathy',age:24,height:'1,65 m',weight:'67 kg',plan:nathtPlan}};
 const profileKey='meu-treino-profiles-v2';
 
 const $=id=>document.getElementById(id),key='meu-treino-v1';
@@ -47,7 +47,7 @@ $('profile').onchange=e=>selectProfile(e.target.value);if('serviceWorker' in nav
 
 
 // V3: configurações, edição de treino, diário de refeições e água. Mantém dados da versão 2.
-const defaults={mauricio:{name:'Maurício',age:27,height:177,weight:80,cal:2300,protein:150,water:2500},natht:{name:'Natht',age:24,height:165,weight:67,cal:1850,protein:110,water:2100}};
+const defaults={mauricio:{name:'Maurício',age:27,height:177,weight:80,cal:2300,protein:150,water:2500},natht:{name:'Nathy',age:24,height:165,weight:67,cal:1850,protein:110,water:2100}};
 function profileConfig(){if(!data.config)data.config={...defaults[active]};return data.config;}
 function activePlan(){if(!data.customPlan)data.customPlan=JSON.parse(JSON.stringify(profiles[active].plan));return data.customPlan;}
 function refreshExtras(){currentPlan=activePlan();const c=profileConfig();$('stat-weight').textContent=c.weight+' kg';$('stat-height').textContent=(c.height/100).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})+' m';$('stat-age').textContent=c.age+' anos';$('measure-weight').placeholder=String(c.weight);document.querySelectorAll('[data-profile-name]').forEach(e=>e.textContent=c.name);render();renderConfig();renderFood();renderWater();}

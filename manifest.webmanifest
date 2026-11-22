@@ -1,22 +1,17 @@
 {
-  "name": "Meu Treino PRO — Treinos, Nutrição e Evolução",
-  "short_name": "Meu Treino PRO",
-  "description": "Treinos, alimentação, evolução, hábitos e relatórios offline para uso pessoal",
-  "start_url": "./",
-  "scope": "./",
-  "display": "standalone",
-  "background_color": "#0b1020",
-  "theme_color": "#0b1020",
-  "icons": [
-    {
-      "src": "icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+ "name":"Meu Treino PRO 5.0",
+ "short_name":"Treino PRO",
+ "description":"Registre treinos, séries, alimentação e evolução corporal.",
+ "id":"./",
+ "start_url":"./index.html",
+ "scope":"./",
+ "display":"standalone",
+ "background_color":"#090d1a",
+ "theme_color":"#10162b",
+ "lang":"pt-BR",
+ "orientation":"any",
+ "icons":[
+   {"src":"./icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+   {"src":"./icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+ ]
 }
